@@ -1,30 +1,47 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// garante que o player sempre tem um Rigidbody
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] InputActionReference moveAction;
-    [SerializeField] float speed = 5f;
+    [SerializeField] InputActionReference acaoMovimento;     // ação de input do teclado (WASD)
+    [SerializeField] float velocidade = 5f;                  // velocidade de deslocamento
 
-    Rigidbody rb;
+    Rigidbody rigidbodyComponente;                           // move o player pela física
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.useGravity = true;
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.constraints = RigidbodyConstraints.FreezeRotation;
+        rigidbodyComponente = GetComponent<Rigidbody>();
+        rigidbodyComponente.useGravity = true;                                   // gravidade ativa
+        rigidbodyComponente.interpolation = RigidbodyInterpolation.Interpolate;  // movimento suave
+        rigidbodyComponente.constraints = RigidbodyConstraints.FreezeRotation;   // não inclina ao colidir
     }
 
-    void OnEnable() => moveAction?.action.Enable();
-    void OnDisable() => moveAction?.action.Disable();
+    void OnEnable()
+    {
+        if (acaoMovimento != null)
+            acaoMovimento.action.Enable();
+    }
+
+    void OnDisable()
+    {
+        if (acaoMovimento != null)
+            acaoMovimento.action.Disable();
+    }
 
     void FixedUpdate()
     {
-        Vector2 input = moveAction.action.ReadValue<Vector2>();
-        Vector3 dir = transform.right * input.x + transform.forward * input.y;
-        dir = Vector3.ClampMagnitude(dir, 1f);
-        rb.linearVelocity = new Vector3(dir.x * speed, rb.linearVelocity.y, dir.z * speed);
+
+        Vector2 entrada = acaoMovimento.action.ReadValue<Vector2>();
+
+        // move o player
+        Vector3 direcao = transform.right * entrada.x + transform.forward * entrada.y;
+
+        // evita ficar mais rápido andando na diagonal
+        direcao = Vector3.ClampMagnitude(direcao, 1f);
+
+        // mantém a gravidade e aplica a horizontal
+        rigidbodyComponente.linearVelocity = new Vector3(direcao.x * velocidade, rigidbodyComponente.linearVelocity.y, direcao.z * velocidade);
     }
 }

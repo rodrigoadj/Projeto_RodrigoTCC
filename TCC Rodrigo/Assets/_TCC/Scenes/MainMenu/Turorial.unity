@@ -511,12 +511,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1f7a716eb1da449b46026c30b05bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseLook
-  lookAction: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  headTransform: {fileID: 330585546}
-  sensitivity: 0.1
-  invertY: 1
-  minPitch: -90
-  maxPitch: 90
+  acaoOlhar: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  transformCabeca: {fileID: 330585546}
+  sensibilidade: 0.1
+  inverterY: 1
+  minimoPitch: -90
+  maximoPitch: 90
 --- !u!114 &665042375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,8 +529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1935084895df3ad4d8b314eb5469e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  speed: 5
+  acaoMovimento: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  velocidade: 5
 --- !u!54 &665042376
 Rigidbody:
   m_ObjectHideFlags: 0
