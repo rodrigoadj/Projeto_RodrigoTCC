@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66c571d0c3000640bd585da1535cb0a, type: 3}
+  m_Name: Osso
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  nome: Osso
+  cesto: 5
+  tipoPlastico: 0
+  pontos: 0
+  prefab: {fileID: 1443719522921295324, guid: 0db4a18cd54ba6d40b6d2538ff4beea4, type: 3}
+  dicaEducativa: "Osso \xE9 org\xE2nico: cesto marrom."

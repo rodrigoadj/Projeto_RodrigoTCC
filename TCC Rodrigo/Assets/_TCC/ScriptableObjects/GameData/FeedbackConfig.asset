@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b6e6a49b2808884cb25bf9d0562029b, type: 3}
+  m_Name: FeedbackConfig
+  m_EditorClassIdentifier: Assembly-CSharp::FeedbackConfig
+  somColetar: {fileID: 0}
+  somItemEscondido: {fileID: 0}
+  somDepositoCorreto: {fileID: 0}
+  somDepositoErrado: {fileID: 0}
+  somAlerta30s: {fileID: 0}
+  jingleMetaAtingida: {fileID: 0}
+  somChute: {fileID: 0}
+  somLixoNoMar: {fileID: 0}
+  somMoedas: {fileID: 0}
+  somMelhoria: {fileID: 0}
+  particulaAreia: {fileID: 0}
+  particulaCesto: {fileID: 0}
+  confete: {fileID: 0}
+  duracaoAnimacaoUI: 0.2

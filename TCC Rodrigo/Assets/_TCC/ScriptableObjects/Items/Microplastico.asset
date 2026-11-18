@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66c571d0c3000640bd585da1535cb0a, type: 3}
+  m_Name: Microplastico
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  nome: "Isopor (micropl\xE1stico)"
+  cesto: 1
+  tipoPlastico: 4
+  pontos: 4
+  prefab: {fileID: 3413768052633642774, guid: 570b581a63b767b4881509d642f06edb, type: 3}
+  dicaEducativa: "Isopor (s\xEDmbolo 6) se quebra em micropl\xE1stico: cesto vermelho."
